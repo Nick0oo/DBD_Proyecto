@@ -14,11 +14,10 @@ el Proyecto Cuenta con 3 Carpetas.
 [Docs](https://github.com/Nick0oo/DBD_Proyecto/tree/main/Docs) Aqui se subiran documentos de interes como:
 
 -[Avances](https://github.com/Nick0oo/DBD_Proyecto/tree/main/Docs/Documentacion%20Avances) Donde se docs de avances.
-*[EntidadRelacion](https://github.com/Nick0oo/DBD_Proyecto/tree/main/Docs/EntidadRelacion) Los modelos Entidad Relacion con su fecha.
-+[Entrega Final](https://github.com/Nick0oo/DBD_Proyecto/blob/main/Docs/Final.docx) El Documento Final con todo a saber del Proyecto.
+-[EntidadRelacion](https://github.com/Nick0oo/DBD_Proyecto/tree/main/Docs/EntidadRelacion) Los modelos Entidad Relacion con su fecha.
+-[Entrega Final](https://github.com/Nick0oo/DBD_Proyecto/blob/main/Docs/Final.docx) El Documento Final con todo a saber del Proyecto.
 
 [Scripts](https://github.com/Nick0oo/DBD_Proyecto/tree/main/Scipts). Aqui se veran todos los scripts que usare a lo largo de el proyecto. 
-
 **citaremos los mas imporantes**
 -[Primeras Consultas](https://github.com/Nick0oo/DBD_Proyecto/blob/main/Scipts/Consultas_1.sql)
 
