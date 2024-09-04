@@ -1,6 +1,6 @@
 <h1 align="center">  Desarrollo de Base de Datos  </h1>
 <h3 align="center"> Nicolas Salas 👨‍🏫 </h3>
-### Repositorio donde se subiran todos los avances relacionados a DBD.
+###Repositorio donde se subiran todos los avances relacionados a DBD.
 
 > [!IMPORTANT]
 > El proyecto de bd es similar al del compañero [Yesi Esteban Pantoja](https://github.com/EstP19/Desarrollo_BD_5-) ya que estamos trabajando un proyecto conjunto, eso si es solo mla estructura ejemplos, scripts y demas son distintos entre si.
