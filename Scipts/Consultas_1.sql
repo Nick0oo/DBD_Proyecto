@@ -9,7 +9,7 @@ WHERE document = 123456;
 
 -- #consulta3: Buscar empleados con la ocupación 'Developer' y documentos mayores a 1,000,000
 SELECT * FROM employees
-WHERE occupation = 'Developer' AND document > 1000000;
+WHERE occupation = 'Analista' AND name_ = "carlos";
 
 -- #consulta4: Buscar clientes cuyo nombre sea 'Juan' o cuyo apellido sea 'Perez'
 SELECT * FROM customers
@@ -26,7 +26,7 @@ WHERE price > 100000;
 -- #consulta7: Buscar reservas confirmadas
 SELECT * FROM reserves r
 JOIN reserve_states rs ON r.idstate = rs.idstate
-WHERE rs.state_name = 'Confirmed';
+WHERE rs.state_name = 'Confirmado';
 
 -- #consulta8: Listar todas las reservas de un cliente específico (ej: idcustomers = 2)
 SELECT * FROM reserves
