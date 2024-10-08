@@ -1,18 +1,40 @@
 use proyecto;
 
 #insertar datos
+<<<<<<< HEAD
 INSERT INTO type_document (`name`)
 VALUES
 ('CC'),('PP'),('CE');
 
 
 INSERT INTO reserve_states (`name`)
+=======
+INSERT INTO type_document (type_document)
+VALUES
+('CC'),('PP'),('CE');
+INSERT INTO employees (name_, createdAt, updatedAt, lastname, birthday, email, phone, address, occupation, date_recruitment, document, idtype_document)
+VALUES
+('Carlos', '2022-01-15', '2022-01-15', 'Gómez', '1990-06-15', 'carlos.gomez@example.com', '+573001234567', 'Calle 123 #45-67, Bogotá', 'Analista', '2023-03-10', 123456789, 1),
+('Luisa', '2022-02-20', '2022-02-20', 'Martínez', '1995-09-25', 'luisa.martinez@example.com', '+573112345678', 'Carrera 11 #22-33, Medellín', 'Diseñadora', '2023-04-15', 987654321, 2);
+INSERT INTO customers (name_, lastname, email, phone, birthday, document, idtype_document)
+VALUES
+('Andrés', 'Rodríguez', 'andres.rodriguez@example.com', '+573202345678', '1998-05-10', 102938756, 1),
+('María', 'López', 'maria.lopez@example.com', '+573302345679', '1992-08-20', 564738290, 2),
+('Camilo', 'Pérez', 'camilo.perez@example.com', '+573402345680', '2000-01-14', 112233445, 3),
+('Sofía', 'Hernández', 'sofia.hernandez@example.com', '+573502345681', '1996-12-05', 998877665, 1),
+('Javier', 'García', 'javier.garcia@example.com', '+573602345682', '1999-07-22', 443322110, 2);
+INSERT INTO reserve_states (state_name)
+>>>>>>> 940caadb623d50df6f068ac348a7d9f78ef64e94
 VALUES
 ('Confirmada'),
 ('Pendiente'),
 ('Cancelada');
 
+<<<<<<< HEAD
 INSERT INTO reserves (idstate, `time`, date_reserve, idcustomers)
+=======
+INSERT INTO reserves (idstate, time_, date_reserve, idcustomers)
+>>>>>>> 940caadb623d50df6f068ac348a7d9f78ef64e94
 VALUES
 (1, '08:30:00', '2024-09-10', 1),
 (2, '11:15:00', '2024-09-11', 2),
@@ -24,7 +46,11 @@ VALUES
 (2, '14:30:00', '2024-09-17', 3),
 (1, '17:00:00', '2024-09-18', 4),
 (2, '19:15:00', '2024-09-19', 5);
+<<<<<<< HEAD
 INSERT INTO payment_methods (`name`)
+=======
+INSERT INTO payment_methods (method_name)
+>>>>>>> 940caadb623d50df6f068ac348a7d9f78ef64e94
 VALUES
 ('Tarjeta de Crédito'),
 ('Tarjeta Débito'),
@@ -38,12 +64,20 @@ VALUES
 (3, '2024-09-12', 250.00, 3),
 (1, '2024-09-13', 300.00, 4),
 (2, '2024-09-14', 180.00, 5);
+<<<<<<< HEAD
 INSERT INTO product_categories (`name`, details)
+=======
+INSERT INTO product_categories (category_name, description)
+>>>>>>> 940caadb623d50df6f068ac348a7d9f78ef64e94
 VALUES
 ('Fútbol', 'Canchas para fútbol de diferentes tamaños'),
 ('Voleibol', 'Canchas para jugar voleibol'),
 ('Otros Deportes', 'Canchas y espacios para otros deportes');
+<<<<<<< HEAD
 INSERT INTO products (`name`, details, price, idcategory)
+=======
+INSERT INTO products (product_name, description, price, idcategory)
+>>>>>>> 940caadb623d50df6f068ac348a7d9f78ef64e94
 VALUES
 ('Cancha Fútbol 5', 'Cancha de Fútbol para 10 personas (5 por equipo)', 150000, 1),
 ('Cancha Fútbol 6', 'Cancha de Fútbol para 12 personas (6 por equipo)', 180000, 1),
@@ -66,3 +100,7 @@ VALUES
 INSERT INTO reserve_products (idreserves, idproduct, quantity, price)
 VALUES
 (4, 3, 1, 200000);  -- 1 Cancha Fútbol 7
+<<<<<<< HEAD
+=======
+select * from employees;
+>>>>>>> 940caadb623d50df6f068ac348a7d9f78ef64e94

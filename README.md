@@ -4,7 +4,11 @@
 # Repositorio donde se subiran todos los avances relacionados a DBD.
 
 > [!IMPORTANT]
+<<<<<<< HEAD
 > El proyecto de bd es similar al del compañero [Yesi Esteban Pantoja](https://github.com/EstP19/Desarrollo_BD_5-) ya que estamos trabajando un proyecto conjunto, eso si es solo mla estructura ejemplos, scripts y demas son distintos entre si.
+=======
+> El proyecto esta siendo trabajado junto al compañero [Yesi Esteban Pantoja Cuellar](https://github.com/EstP19)
+>>>>>>> 940caadb623d50df6f068ac348a7d9f78ef64e94
 
 **ahora vamos con como esta estructurado el proyecto.**
 
@@ -28,6 +32,10 @@ el Proyecto Cuenta con 3 Carpetas.
 
 >- [Primeras Consultas](https://github.com/Nick0oo/DBD_Proyecto/blob/main/Scipts/Consultas_1.sql)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 940caadb623d50df6f068ac348a7d9f78ef64e94
 ## 
 
 > [!NOTE]
