@@ -56,6 +56,7 @@ INSERT INTO city (name) VALUES
 -- Insertar direcciones
 INSERT INTO address (idCity, neighborhood, street) VALUES
 (1, 'Chapinero', 'Calle 45 # 26-32'),  -- Bogotá
+(1, 'Fontibon', 'Calle 45 # 26-32'),  -- Bogotá
 (2, 'El Poblado', 'Carrera 43A # 4 Sur-89'),  -- Medellín
 (3, 'San Fernando', 'Avenida 2 # 10-34'),  -- Cali
 (4, 'Centro', 'Calle 30 # 7-25'),  -- Barranquilla
@@ -72,7 +73,7 @@ INSERT INTO people (name, lastName, birthday, document, idAddress, idTypeDocumen
 ('Felipe', 'Córdoba', '1980-11-18', 12309876, 2, 2, 7),  -- User 7
 ('Paola', 'Mendoza', '1991-12-25', 54321098, 3, 1, 8),  -- User 8
 ('Andrés', 'Torres', '1984-01-30', 67890123, 4, 2, 9),  -- User 9
-('Carolina', 'Barrera', '1996-02-14', 43210987, 5, 1, 10),  -- User 10
+('Carolina', 'Herrera', '1996-02-14', 43210987, 5, 1, 10),  -- User 10
 ('Camilo', 'Vargas', '1999-01-19', 10002131, 2, 3, 11); -- User 11
 
 -- Asociar números de teléfono a personas
@@ -151,16 +152,16 @@ INSERT INTO paymentMethods (`name`) VALUES
 ('PayPal');
 
 -- Inserción en PaymentTransactionInformation
-INSERT INTO paymentTransactionInformation (idCustomers, numberTarjet, idStatus, idPayMethods, idGatewayRecords) VALUES
-(1, 1234567812345678, 2, 1, NULL),  -- Cliente 1, Tarjeta de Crédito, Completado, Método 1
-(2, 1234567812345679, 1, 2, NULL),  -- Cliente 2, Tarjeta de Débito, Pendiente, Método 2
-(3, 1234567812345680, 2, 3, NULL),  -- Cliente 3, Transferencia Bancaria, Completado, Método 3
-(4, NULL, 2, (SELECT id FROM paymentMethods WHERE name = 'Efectivo'), NULL), -- Cliente 4, Efectivo, Completado, Método 4
-(5, 1234567812345682, 2, 5, NULL),  -- Cliente 5, PayPal, Completado, Método 5
-(6, 1234567812345683, 2, 1, NULL),  -- Cliente 6, Tarjeta de Crédito, Completado, Método 1
-(8, 1234567812345684, 1, 2, NULL),  -- Cliente 8, Tarjeta de Débito, Pendiente, Método 2
-(9, 1234567812345685, 2, 3, NULL),  -- Cliente 9, Transferencia Bancaria, Completado, Método 3
-(10, NULL, 2, (SELECT id FROM paymentMethods WHERE name = 'Efectivo'), NULL); -- Cliente 10, Efectivo, Completado, Método 4
+INSERT INTO paymentTransactionInformation (idCustomers, numberTarjet, idStatus, idPayMethods) VALUES
+(1, 1234567812345678, 2, 1),  -- Cliente 1, Tarjeta de Crédito, Completado, Método 1
+(2, 1234567812345679, 1, 2),  -- Cliente 2, Tarjeta de Débito, Pendiente, Método 2
+(3, 1234567812345680, 2, 3),  -- Cliente 3, Transferencia Bancaria, Completado, Método 3
+(4, NULL, 2, (SELECT id FROM paymentMethods WHERE name = 'Efectivo')), -- Cliente 4, Efectivo, Completado, Método 4
+(5, 1234567812345682, 2, 5),  -- Cliente 5, PayPal, Completado, Método 5
+(6, 1234567812345683, 2, 1),  -- Cliente 6, Tarjeta de Crédito, Completado, Método 1
+(8, 1234567812345684, 1, 2),  -- Cliente 8, Tarjeta de Débito, Pendiente, Método 2
+(9, 1234567812345685, 2, 3),  -- Cliente 9, Transferencia Bancaria, Completado, Método 3
+(10, NULL, 2, (SELECT id FROM paymentMethods WHERE name = 'Efectivo')); -- Cliente 10, Efectivo, Completado, Método 4
 
 
 -- Inserción en paymentGatewayRecords

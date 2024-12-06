@@ -13,7 +13,7 @@ CREATE TABLE type_document(
 CREATE TABLE users(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	email VARCHAR(255) UNIQUE,
-	`password` VARCHAR (255) UNIQUE,
+	`password` VARCHAR (256) UNIQUE,
 	createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
     updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
@@ -141,7 +141,6 @@ CREATE TABLE paymentTransactionInformation (
     numberTarjet VARCHAR (255),
     idStatus INT NOT NULL,
     idPayMethods INT NOT NULL,
-    idGatewayRecords INT,
     FOREIGN KEY (idPayMethods) REFERENCES paymentMethods(id),
     FOREIGN KEY (idStatus) REFERENCES statusPayment(id),
     FOREIGN KEY (idCustomers) REFERENCES users(id),

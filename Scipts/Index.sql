@@ -185,7 +185,9 @@ SELECT *
 FROM paymentGatewayRecords 
 WHERE idTransaction = 7 OR idStatus = 1;
 
+-- ÍNDICE COMPUESTO (Composite Index) EN LA TABLA 'invoice'
 CREATE INDEX idx_invoice_customer_employee_date ON invoice(idCustomers, idEmployees, invoiceDate);
+-- Consulta que utiliza el índice compuesto
 SELECT 
     invoice.id, 
     invoice.invoiceDate, 
@@ -202,7 +204,9 @@ ORDER BY
     invoice.idEmployees ASC, 
     invoice.invoiceDate DESC;
 
+-- ÍNDICE COMPUESTO (Composite Index) EN LA TABLA 'reserves'
 CREATE INDEX idx_reserves_state_user_date ON reserves(idState, idUser, dateReserve);
+-- Consulta que utiliza el índice compuesto
 SELECT 
     reserves.id, 
     reserves.`time`, 
@@ -219,13 +223,3 @@ WHERE
 ORDER BY 
     reserves.idUser DESC, 
     reserves.dateReserve ASC;
-
-
-
-
-
-CREATE INDEX idx_products_price ON products(price);
-SELECT * 
-FROM products 
-WHERE price BETWEEN 50 AND 100;
-

@@ -321,7 +321,6 @@ LEFT JOIN
     roles r ON ur.idRole = r.id
 ORDER BY Rol ASC;
 
-
 #consulta 27 Listar las reservas junto con el estado de cada reserva:
 SELECT 
     r.id AS reserve_id, 
@@ -469,7 +468,7 @@ CROSS JOIN
     
 #--------------------------------------------- SUBCONSULTAS ----------------------------------------
 
-#subconsultas 1 Obtener los clientes y su nombre con promedio mayor a 80 en alquilar las canchas con where
+#subconsultas 1 Obtener los clientes y su nombre con promedio mayor a 80 en alquilar las canchas 
 SELECT 
     people.name AS client_name,
     ROUND(
@@ -578,7 +577,8 @@ SELECT
          (SELECT pti.id 
           FROM paymentTransactionInformation pti 
           WHERE pti.idCustomers = r.idUser)
-       AND p.idTransaction IN (SELECT pti.id FROM paymentTransactionInformation pti WHERE pti.idCustomers = r.idUser)
+       AND p.idTransaction IN (SELECT pti.id FROM paymentTransactionInformation pti 
+			WHERE pti.idCustomers = r.idUser)
      ORDER BY p.createdAt DESC 
      LIMIT 1) AS discount_amount
 FROM 
@@ -586,7 +586,7 @@ FROM
 INNER JOIN reserveStates rs ON r.idState = rs.id
 WHERE r.idState = 2;
 
-#9 subconsulta Selec, Obtiene el total de reservas realizadas por cada usuario.
+#8 subconsulta Selec, Obtiene el total de reservas realizadas por cada usuario.
 SELECT 
     users.id AS user_id,
     people.name,
@@ -597,7 +597,8 @@ FROM
     users
 INNER JOIN people ON users.id = people.idUser;
 
-#10 subconsulta select. los productos reservados con sus precios originales y el precio final, siempre que haya un descuento aplicable
+#9 subconsulta select. los productos reservados con sus precios originales y el precio final, 
+# siempre que haya un descuento aplicable
 SELECT 
     reserves.id AS reserve_id,
     products.name AS product_name,
@@ -616,7 +617,7 @@ GROUP BY
 ORDER BY 
 	reserves.id;
 
-#11 subconsulta con IN Obtener personas que tienen reservas en un estado específico
+#10 subconsulta con IN Obtener personas que tienen reservas en un estado específico
 SELECT p.name, p.lastName 
 FROM people p 
 WHERE p.id IN (
@@ -625,7 +626,7 @@ WHERE p.id IN (
     WHERE r.idState IN (2) 
 );
 
-#12 subconsulta con exists. Listar reservas que tienen pagos asociados
+#11 subconsulta con exists. Listar reservas que tienen pagos asociados
 SELECT 
     r.id AS reserve_id,
     r.dateReserve,
@@ -651,16 +652,16 @@ WHERE
 GROUP BY r.id, r.dateReserve, p.name, rs.name  
 ORDER BY r.dateReserve DESC;  
 
-#13 subconsulta con any. clientes registrados con TI
+#12 Obtener Personas con un Documento Mayor que Cualquier Documento de un Usuario Específico
 SELECT name, document 
 FROM people 
 WHERE document > ANY (
     SELECT document 
     FROM people 
-    WHERE idTypeDocument = 1
+    WHERE idUser = 2
 );
 
-#14 subconsulta Any. Productos con menor precio que cancha de futbol 7
+#13 subconsulta Any. Productos con menor precio que cancha de futbol 7
 SELECT name 
 FROM products 
 WHERE price < ALL (
@@ -669,7 +670,7 @@ WHERE price < ALL (
     WHERE id = 2
 );
 
-#15 subconsulta Any. Listar reservas de usuarios que han realizado pagos mayores a un monto  70
+#14 subconsulta Any. Listar reservas de usuarios que han realizado pagos mayores a un monto  70
 SELECT 
     r.id AS reserve_id,
     r.dateReserve,
