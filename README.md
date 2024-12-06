@@ -1,5 +1,6 @@
 <h1 align="center">  Desarrollo de Base de Datos  </h1>
 <h3 align="center"> Nicolas Salas 👨‍🏫 </h3>
+<h3 align="center"> Esteban Pantoja 👨‍🏫 </h3>
 
 # Repositorio donde se subiran todos los avances relacionados a DBD.
 
